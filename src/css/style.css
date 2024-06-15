@@ -1,0 +1,35 @@
+
+/*--------------------------------------------------------------
+# Declaration of variables css - Declaración de variables css
+--------------------------------------------------------------*/
+
+:root {
+
+  --size: 80;
+  --unit: calc((var(--size) / 480) * 1vmin);
+
+  --red: #dc0a2d;
+  --dark-red: #8c0820;
+  --soft-red: #f0667d;
+  --black: #04312a;
+  --blue: #21aefe;
+  --blue-baby: #98d9ff;
+  --red-light: #f7103c;
+  --red-light-melon: #fd7991;
+  --yellow-light: #ffdc40;
+  --yellow-light-linen: #fcf6dc;
+  --green-light: #326b3e;
+  --green-light-asparagus: #7fbf8d;
+
+  --screen-green: #51ae5e;
+  --screen-dark: #232323;
+  --white: #dedede;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+
+  /* mas adelante agregaremos un fondo que cambiara segun alguna variable en js */
+
+}
