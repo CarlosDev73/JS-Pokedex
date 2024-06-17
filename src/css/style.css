@@ -30,6 +30,447 @@
   padding: 0;
 
 
-  /* mas adelante agregaremos un fondo que cambiara segun alguna variable en js */
+  /* mas adelante agregaremos un fondo que cambiara segun alguna variable en js la idea seria segun el tipo del pokemon*/
 
 }
+
+
+* {
+
+  font-family: "Press Start 2P", cursive;
+}
+
+
+
+.pokedex {
+
+  height: calc(360 * var(--unit));
+  width:  calc(480 * var(--unit));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-container{
+
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 3%;
+  top: 0%;
+  border-radius: 3%;
+  border: 5px solid var(--dark-red);
+  background: var(--red);
+}
+
+.hinge{
+
+  position: absolute;
+  width: 15%;
+  height: 85%;
+  left: 85%;
+  top: 15%;
+  border-radius: 0%; 
+  background: linear-gradient(
+    90deg,
+    var(--dark-red),
+    var(--soft-red),
+    var(--red),
+    var(--dark-red)
+  );
+}
+
+.hinge::before{
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1%;
+  left: 0%;
+  top:10%;
+  background: var(--dark-red);
+}
+
+.hinge::after{
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1%;
+  left: 0%;
+  bottom:10%;
+  background: var(--dark-red);
+}
+
+.blue-led{
+
+  position: absolute;
+  width: 19%;
+  height: 13%;
+  left: 7%;
+  top:4%;
+  border-radius: 50%;
+  border: 8px solid white;
+  background: var(--blue);
+  background: radial-gradient(var(--blue-baby) 0%, var(--blue) 50%);
+}
+
+.blue-led::after{
+
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 20%;
+  left: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.leds{
+
+  position: absolute;
+  width: 20%;
+  height: 3%;
+  left: 33%;
+  top:3%;
+}
+
+.red{
+
+  position: absolute;
+  width: 23%;
+  height: 100%;
+  left: 0%; 
+  top: 0%;
+  border-radius: 50%;
+  border: 1px solid black; 
+  background: radial-gradient(
+    var(--red-light-melon) 0%,
+    var(--red-light) 60%);
+}
+
+.red::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 20%;
+  top: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.yellow{
+
+  position: absolute;
+  width: 23%;
+  height: 100%;
+  left: 42%; 
+  top: 0%;
+  border-radius: 50%;
+  border: 1px solid black; 
+  background: radial-gradient(
+    var(--yellow-light-linen) 0%,
+    var(--yellow-light) 60%);
+}
+
+.yellow::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 20%;
+  top: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.green{
+
+  position: absolute;
+  width: 23%;
+  height: 100%;
+  left: 84%; 
+  top: 0%;
+  border-radius: 50%;
+  border: 1px solid black; 
+  background: radial-gradient(
+    var(--green-light-asparagus) 0%,
+    var(--green-light) 60%);
+}
+
+.green::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 20%;
+  top: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.line1{
+
+  position: absolute;
+  width: 45%;
+  height: 0%;
+  left: -1%;
+  top: 23%;
+  background: var(--dark-red);
+  border-top: 5px solid var(--dark-red);
+}
+
+.line2 {
+
+  position: absolute;
+  width: 17.6%;
+  height: 0%;
+  left: 41%;
+  top: 18.9%;
+  transform: rotate(-45deg);
+  background: var(--dark-red);
+  border-top: 5px solid var(--dark-red);
+}
+
+.line3 {
+  position: absolute;
+  width: 45%;
+  height: 0%;
+  left: 55.5%;
+  top: 15%;
+  background: var(--dark-red);
+  border-top: 5px solid var(--dark-red);
+}
+
+.screen-pokemon {
+
+  position: absolute;
+  width: 65%;
+  height: 37%;
+  left: 10%;
+  top: 30%;
+  border-radius: 3%;
+  background: var(--white);
+}
+
+
+.corner-triangle {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  left: -1%;
+  top: 86%;
+  background: var(--red);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.red-dot-1 {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  left: 42%;
+  top: 6%;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.red-dot-2 {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  left: 58%;
+  top: 6%;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.screen {
+  position: absolute;
+  width: 72%;
+  height: 66%;
+  left: 14%;
+  top: 15%;
+  background: var(--screen-dark);
+}
+
+.red-dot-3 {
+  position: absolute;
+  width: 7%;
+  height: 8%;
+  left: 14%;
+  top: 86%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: var(--red);
+}
+
+
+
+.speakerbars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 13%;
+  height: 12%;
+  left: 82%;
+  top: 84%;
+}
+
+.speakerbar {
+  width: 100%;
+  height: 17%;
+  border-radius: 50px;
+  background: var(--black);
+}
+
+
+
+.black-button {
+
+  position: absolute;
+  width: 12%;
+  height: 8%;
+  left: 7%;
+  top: 74%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: var(--black);
+}
+
+.red-pill-button {
+
+  position: absolute;
+  width: 12%;
+  height: 2%;
+  left: 21%;
+  top: 70%;
+  border-radius: 50px;
+  border: 1px solid black;
+  background: var(--red-light);
+}
+
+.blue-pill-button {
+
+  position: absolute;
+  width: 12%;
+  height: 2%;
+  left: 38%;
+  top: 70%;
+  border-radius: 50px;
+  border: 1px solid black;
+  background: var(--blue);
+}
+
+.number-input {
+
+  position: absolute;
+  width: 30%;
+  height: 12%;
+  left: 22%;
+  top: 78%;
+  border-radius: 5%;
+  border: 1px solid black;
+  background: var(--screen-green);
+}
+
+.directional-pad {
+
+  position: absolute;
+  width: 21%;
+  height: 5%;
+  left: 58%;
+  top: 78%;
+  border-radius: 5%;
+  border: 1px solid black;
+  background: var(--black);
+}
+
+.directional-pad::before {
+
+  content: "";
+  position: absolute;
+  width: 33%;
+  height: 100%;
+  left: 34%;
+  top: -98%;
+  border-radius: 5%;
+  border: 1px solid black;
+  border-bottom: none;
+  background: var(--black);
+}
+
+.directional-pad::after {
+
+  content: "";
+  position: absolute;
+  width: 33%;
+  height: 100%;
+  left: 34%;
+  top: 97%;
+  border-radius: 5%;
+  border: 1px solid black;
+  border-top: none;
+  background: var(--black);
+}
+
+.circle {
+
+  position: absolute;
+  width: 10%;
+  height: 30%;
+  left: 45%;
+  top: 33%;
+  border-radius: 50%;
+  background: var(--screen-dark);
+}
+
+.directional-left{
+
+  z-index: 1;
+  position: absolute;
+  width: 34%;
+  height: 100%;
+  left: 0%;
+  background: var(--white);
+}
+
+.directional-right{
+
+  z-index: 1;
+  position: absolute;
+  width: 34%;
+  height: 100%;
+  left: 68%;
+  background: var(--white);
+  
+}
+
+.directional-up{
+
+  z-index: 1;
+  position: absolute;
+  width: 34%;
+  height: 100%;
+  left: 34%;
+  right: 34%;
+  top: -90%;
+  background: var(--white);
+}
+
+.directional-down{
+
+  z-index: 1;
+  position: absolute;
+  width: 34%;
+  height: 100%;
+  left: 34%;
+  right: 34%;
+  top: 100%;
+  background: var(--white);
+}
+
+
