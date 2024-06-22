@@ -80,6 +80,73 @@ img.pokemon-picture {
 
 
 /*--------------------------------------------------------------
+#                      Sound buttons
+--------------------------------------------------------------*/
+
+.sound{
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+.pokeball{
+
+  position: relative;
+  margin-left: 5px;
+  width: 80px;
+  height: 80px;
+  background: var(--white);
+  border: 5px solid var(--screen-dark);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pokeball::before{
+
+  content: "";
+  position: absolute;
+  background: var(--red);
+  width: 100%;
+  height: 50%;
+}
+
+.pokeball::after{
+
+  content: "";
+  position: absolute;
+  top: calc(50% - 3px);
+  width: 100%;
+  height: 50%;
+  background: var(--white);
+  border-top: 3px solid;
+}
+
+.boton{
+
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid;
+  border-radius: 50%;
+  top: calc(50% - 10px - 4px);
+  left: calc(50% - 10px - 4px);
+  z-index: 10;
+  background: var(--white);
+}
+
+.fa-play{
+  
+  padding-left: 4.5px;
+}
+
+.fa-pause{
+
+  padding-left: 4.5px;
+}
+
+/*--------------------------------------------------------------
 # Main container - Contenedor principal
 --------------------------------------------------------------*/
 
@@ -397,7 +464,7 @@ img.pokemon-picture {
   background: var(--blue);
 }
 
-.number-input {
+.id-input {
 
   position: absolute;
   width: 30%;
