@@ -35,11 +35,36 @@
 }
 
 
+/*--------------------------------------------------------------
+#                        General 
+--------------------------------------------------------------*/
+
 * {
 
   font-family: "Press Start 2P", cursive;
 }
 
+
+p {
+  
+  font-size: 8px;
+  color: var(--screen-green);
+}
+
+input {
+
+  width: 100%;
+  font-size: 48%;
+  text-align: center;
+  color: var(--screen-dark);
+}
+
+
+img.pokemon-picture {
+
+  height: 100%;
+  width: 100%;
+}
 
 
 .pokedex {
@@ -51,6 +76,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+/*--------------------------------------------------------------
+# Main container - Contenedor principal
+--------------------------------------------------------------*/
+
 
 .main-container{
 
@@ -474,3 +506,172 @@
 }
 
 
+/*--------------------------------------------------------------
+# secondary container - Contenedor secundario
+--------------------------------------------------------------*/
+
+.secondary-container{
+
+  position: absolute;
+  width: 44%;
+  height: 76%;
+  left: 53%;
+  top: 24%;
+  border: 5px solid var(--dark-red);
+  background: var(--red);
+  z-index: -1;
+}
+
+.secondary-container::before{
+
+  content: "";
+  position: absolute;
+  width: 33.5%;
+  height: 12%;
+  left: 1%;
+  top: -11.8%;
+  border-top: 5px solid var(--dark-red);
+  background: var(--red);
+}
+
+.secondary-container::after{
+
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 13%;
+  left: 24.8%;
+  top: -8.3%;
+  border-radius: 0% 0% 50% 50%;
+  transform: rotate(45deg);
+  border-top: 5px solid var(--dark-red);
+  background: var(--red);
+}
+
+
+.large-screen {
+
+  position: absolute;
+  width: 80%;
+  height: 20%;
+  left: 10%;
+  top: 10%;
+  border-radius: 5px;
+  background: var(--screen-dark);
+}
+
+.large-screen > p {
+
+  padding-left: 5%;
+}
+
+.blue-buttons {
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  position: absolute;
+  width: 79%;
+  height: 17%;
+  left: 10%;
+  top: 33%;
+  background: var(--screen-dark);
+}
+
+.blue-button {
+
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--screen-dark);
+  background: var(--blue);
+}
+
+.black-pill-buttons {
+
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 30%;
+  height: 2%;
+  left: 60%;
+  top: 53%;
+}
+
+.black-pill-button {
+
+  display: flex;
+  background: var(--screen-dark);
+  width: 45%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.white-buttons {
+
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 32%;
+  height: 9%;
+  left: 10%;
+  top: 57%;
+}
+
+
+#white-button1, #white-button2 {
+
+  background: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  width: 50%;
+  border: 1px solid var(--screen-dark);
+}
+
+.yellow-light {
+
+  position: absolute;
+  width: 10%;
+  height: 8%;
+  left: 75%;
+  top: 61%;
+  border-radius: 100%;
+  border: 1px solid black;
+  background: radial-gradient(
+    var(--yellow-light-gradient) 0%,
+    var(--yellow-light) 60%
+  );
+}
+
+.yellow-light::after {
+
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 20%;
+  top: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.small-screens {
+
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 80%;
+  height: 10%;
+  left: 10%;
+  top: 78%;
+}
+
+.small-screen-secondary {
+
+  display: flex;
+  justify-content: center;
+  background: var(--screen-dark);
+  border-radius: 4px;
+  height: 100%;
+  width: 45%;
+  border: 1px solid var(--screen-dark);
+}
