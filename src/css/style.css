@@ -32,12 +32,43 @@
 
   /* mas adelante agregaremos un fondo que cambiara segun alguna variable en js la idea seria segun el tipo del pokemon*/
 
+
+  --type-grass: #78c850;
+  --type-fire: #f08030;
+  --type-water: #6890f0;
+  --type-bug: #a8b820;
+  --type-normal: #a8a878;
+  --type-poison: #a040a0;
+  --type-electric: #f8d030;
+  --type-ground: #e0c068;
+  --type-fairy: #ee99ac;
+  --type-fighting: #c03028;
+  --type-psychic: #f85888;
+  --type-rock: #b8a038;
+  --type-ghost: #705898;
+  --type-ice: #98d8d8;
+  --type-dragon: #7038f8;
+  --type-dark: #705848;
+  --type-steel: #b8b8d0;
+  --type-flying: #a890f0;
+
+
+  
+
 }
 
 
 /*--------------------------------------------------------------
 #                        General 
 --------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--white); /* Initial background */
+  transition: background-color 2s ease; /* transition */
+}
 
 * {
 

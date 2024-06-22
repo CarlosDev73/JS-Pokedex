@@ -12,6 +12,8 @@ const weight = document.getElementById('weight');
 const type1 = document.getElementById('type-1');
 const type2 = document.getElementById('type-2');
 
+const directionalRigth = document.querySelector('.directional-right')
+
 //Data of Music 
 const playButton = document.getElementById('playButton');
 const pauseButton = document.getElementById('pauseButton')
@@ -56,8 +58,14 @@ const handleSearchPokemon = (id)=>{
     height.innerHTML = `${(jsonResponse.height/10)} m`;
     weight.innerHTML = `${(jsonResponse.weight/10)} kg`;
     type1.innerHTML = jsonResponse.types[0].type.name;
+
+    type1Name = jsonResponse.types[0].type.name; // variable for color change in background
+    updateBackgroundColor(type1Name); // function that allows us to change the background
+
+    
     type2.innerHTML = "___";
     type2.innerHTML = jsonResponse.types[1].type.name;
+    
     
   })
   .catch(error =>{
@@ -81,6 +89,85 @@ searchButton.addEventListener("click", ()=> handleSearchPokemon(inputField.value
 
 
 
+const updateBackgroundColor = (type)=>{
+
+  const body = document.body;
+
+  if(type === "grass"){
+    return body.style.backgroundColor = 'var(--type-grass)';
+  }
+
+  if(type === "fire"){
+    return body.style.backgroundColor = 'var(--type-fire)';
+  }
+
+  if(type === "water"){
+    return body.style.backgroundColor = 'var(--type-water)';
+  }
+
+  if(type === "bug"){
+    return body.style.backgroundColor = 'var(--type-bug)';
+  }
+
+  if(type === "normal"){
+    return body.style.backgroundColor = 'var(--type-normal)';
+  }
+
+  if(type === "poison"){
+    return body.style.backgroundColor = 'var(--type-poison)';
+  }
+
+  if(type === "electric"){
+    return body.style.backgroundColor = 'var(--type-electric)';
+  }
+
+  if(type === "ground"){
+    return body.style.backgroundColor = 'var(--type-ground)';
+  }
+
+  if(type === "fairy"){
+    return body.style.backgroundColor = 'var(--type-fairy)';
+  }
+
+  if(type === "fighting"){
+    return body.style.backgroundColor = 'var(--type-fighting)';
+  }
+
+  if(type === "psychic"){
+    return body.style.backgroundColor = 'var(--type-psychic)';
+  }
+
+  if(type === "rock"){
+    return body.style.backgroundColor = 'var(--type-rock)';
+  }
+
+  if(type === "ghost"){
+    return body.style.backgroundColor = 'var(--type-ghost)';
+  }
+
+  if(type === "ice"){
+    return body.style.backgroundColor = 'var(--type-ice)';
+  }
+
+  if(type === "dragon"){
+    return body.style.backgroundColor = 'var(--type-dragon)';
+  }
+
+  if(type === "dark"){
+    return body.style.backgroundColor = 'var(--type-dark)';
+  }
+
+  if(type === "steel"){
+    return body.style.backgroundColor = 'var(--type-steel)';
+  }
+
+  if(type === "flying"){
+    return body.style.backgroundColor = 'var(--type-flying)';
+  }
+
+  return body.style.backgroundColor = 'var(--white)';
+}
+
 
 
 // Event Listener Music 
@@ -90,10 +177,4 @@ playButton.addEventListener("click", ()=> sound.play());
 
 
 pauseButton.addEventListener("click", ()=> sound.pause());
-
-
-window.onload = function() {
-  sound.play();
-};
-
 
