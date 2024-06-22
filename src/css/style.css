@@ -675,3 +675,34 @@ img.pokemon-picture {
   width: 45%;
   border: 1px solid var(--screen-dark);
 }
+
+
+
+/*--------------------------------------------------------------
+#                Responsive - Media querys
+--------------------------------------------------------------*/
+
+
+@media(max-width: 799px){
+
+  p {
+
+    font-size: 0.7em;
+  }
+}
+
+@media(max-width:499px){
+
+  p {
+
+    font-size: 0.3em;
+  }
+
+  .blue-led{
+
+    left: 3.5%;
+    top:2%;
+  }
+
+
+}
