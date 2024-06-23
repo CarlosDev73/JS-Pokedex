@@ -15,7 +15,7 @@ const type2 = document.getElementById('type-2');
 
 // Data directional-pad
 
-let currentPokemonId = 0; 
+let currentPokemonId = 0; // initial variable for the current pokemon id
 const directionalRigth = document.querySelector('.directional-right')
 const directionalLeft = document.querySelector('.directional-left')
 const directionalUp = document.querySelector('.directional-up')
@@ -71,13 +71,15 @@ const handleSearchPokemon = (id)=>{
 
     type2.innerHTML = jsonResponse.types[1] ? jsonResponse.types[1].type.name : "___";
 
-    currentPokemonId = jsonResponse.id;
+    currentPokemonId = jsonResponse.id; //variable for the current pokemon id
   })
   .catch(error =>{
+    
+    const body = document.body;
+
     namePokemon.innerHTML =` ${inputField.value} not found`
     height.innerHTML = `?`;
-    weight.innerHTML = `?`;
-    const body = document.body;
+    weight.innerHTML = `?`; 
     body.style.backgroundColor = 'var(--white)';
     imagePokemon.src = "./public/images/pokedexScreen/errorScren2.jpg";
   })
@@ -235,7 +237,6 @@ directionalDown.addEventListener("click", ()=>{
 
   handleSearchPokemon(backId);
 })
-
 
 
 // Event Listener Music 
