@@ -12,7 +12,14 @@ const weight = document.getElementById('weight');
 const type1 = document.getElementById('type-1');
 const type2 = document.getElementById('type-2');
 
+
+// Data directional-pad
+
+let currentPokemonId = 0; 
 const directionalRigth = document.querySelector('.directional-right')
+const directionalLeft = document.querySelector('.directional-left')
+const directionalUp = document.querySelector('.directional-up')
+const directionalDown = document.querySelector(".directional-down")
 
 //Data of Music 
 const playButton = document.getElementById('playButton');
@@ -64,7 +71,7 @@ const handleSearchPokemon = (id)=>{
 
     type2.innerHTML = jsonResponse.types[1] ? jsonResponse.types[1].type.name : "___";
 
-    
+    currentPokemonId = jsonResponse.id;
   })
   .catch(error =>{
     namePokemon.innerHTML =` ${inputField.value} not found`
@@ -82,6 +89,8 @@ const handleSearchPokemon = (id)=>{
 #                     Event Listener
 --------------------------------------------------------------*/
 
+// Event search pokemon
+
 inputField.addEventListener("keydown", (e)=>{
   if(e.key === "Enter"){
     searchButton.click();
@@ -91,6 +100,7 @@ inputField.addEventListener("keydown", (e)=>{
 searchButton.addEventListener("click", ()=> handleSearchPokemon(inputField.value))
 
 
+// Event update Background
 
 const updateBackgroundColor = (type)=>{
 
@@ -170,6 +180,61 @@ const updateBackgroundColor = (type)=>{
 
   return body.style.backgroundColor = 'var(--white)';
 }
+
+
+// Event directional-pad
+
+directionalRigth.addEventListener("click", () => {
+
+  let nextId = currentPokemonId + 1;
+
+  if(nextId > 1025){
+    return 0;
+  }
+
+  inputField.value = nextId;
+
+  handleSearchPokemon(nextId);
+});
+
+directionalUp.addEventListener("click", ()=>{
+
+  let nextId = currentPokemonId + 1;
+
+  if(nextId > 1025){
+    return 0;
+  }
+
+  inputField.value = nextId;
+
+  handleSearchPokemon(nextId);
+})
+
+directionalLeft.addEventListener("click", ()=>{
+
+  let backId = currentPokemonId - 1;
+
+  if(backId < 1){
+    return 0; 
+  }
+
+  inputField.value = backId;
+
+  handleSearchPokemon(backId);
+})
+
+directionalDown.addEventListener("click", ()=>{
+
+  let backId = currentPokemonId - 1;
+
+  if(backId < 1){
+    return 0; 
+  }
+
+  inputField.value = backId;
+
+  handleSearchPokemon(backId);
+})
 
 
 
