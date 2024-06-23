@@ -3,6 +3,8 @@
 #                           Data 
 --------------------------------------------------------------*/
 
+// Main data 
+
 const searchButton = document.querySelector('.black-button');
 const inputField = document.querySelector('.id-input'); // id or name field 
 const imagePokemon = document.querySelector('.pokemon-picture');
@@ -27,6 +29,29 @@ const pauseButton = document.getElementById('pauseButton')
 let sound = new Audio('./public/sound/pokemonIntro.mp3');
 sound.volume = 0.55;
 
+// pokemon stats
+
+const pname = document.querySelector('.pname');
+const pheight = document.querySelector('.pheight');
+const pweight = document.querySelector('.pweight');
+
+const hp = document.getElementById('hp');
+const speed = document.getElementById('speed');
+const attack = document.getElementById('attack');
+const defense = document.getElementById('defense');
+const spattack = document.getElementById('spattack');
+const spdefense = document.getElementById('spdefense');
+
+const rowdata1 = document.querySelector('.rowdata1');
+const rowdata2 = document.querySelector('.rowdata2');
+const rowdata3 = document.querySelector('.rowdata3');
+
+const nextInfo = document.getElementById('white-button2')
+const backInfo = document.getElementById('white-button1')
+
+let showingPrimaryStats = true; 
+
+
 
 /*--------------------------------------------------------------
 #                      Change Fields
@@ -39,6 +64,13 @@ const changeFields = ()=>{
   weight.innerHTML = "";
   type1.innerHTML = "";
   type2.innerHTML = ""; 
+
+  hp.innerHTML = "";
+  attack.innerHTML = "";
+  defense.innerHTML = "";
+  spattack.innerHTML = "";
+  spdefense.innerHTML = "";
+  speed.innerHTML = "";
 }
 
 
@@ -72,9 +104,17 @@ const handleSearchPokemon = (id)=>{
     type2.innerHTML = jsonResponse.types[1] ? jsonResponse.types[1].type.name : "___";
 
     currentPokemonId = jsonResponse.id; //variable for the current pokemon id
+
+    //stats pokemon 
+    hp.innerHTML = jsonResponse.stats[0].base_stat;
+    attack.innerHTML = jsonResponse.stats[1].base_stat;
+    defense.innerHTML = jsonResponse.stats[2].base_stat;
+    spattack.innerHTML = jsonResponse.stats[3].base_stat;
+    spdefense.innerHTML = jsonResponse.stats[4].base_stat;
+    speed.innerHTML = jsonResponse.stats[5].base_stat;
   })
   .catch(error =>{
-    
+
     const body = document.body;
 
     namePokemon.innerHTML =` ${inputField.value} not found`
@@ -237,6 +277,62 @@ directionalDown.addEventListener("click", ()=>{
 
   handleSearchPokemon(backId);
 })
+
+// Evente listener stats pokemon
+
+const stats = ()=>{
+
+  if (showingPrimaryStats) {
+  
+    // Hide name, height and weight 
+    pname.style.display = 'none';
+    pheight.style.display = 'none';
+    pweight.style.display = 'none';
+    
+    // Show stats rows
+    rowdata1.style.display = 'inline';
+    rowdata2.style.display = 'inline';
+    rowdata3.style.display = 'inline';
+
+  } else {
+    
+    //return to main screen
+    pname.style.display = 'inline';
+    rowdata1.style.display = 'none';
+    
+    pheight.style.display = 'inline';
+    rowdata2.style.display = 'none';
+
+    pweight.style.display = 'inline';
+    rowdata3.style.display = 'none';
+  }
+
+  showingPrimaryStats = !showingPrimaryStats;
+}
+
+const statsmain = ()=>{
+
+  if(showingPrimaryStats){
+    
+    return 0;
+  }
+
+  if(!showingPrimaryStats){
+    pname.style.display = 'inline';
+    rowdata1.style.display = 'none';
+    
+    pheight.style.display = 'inline';
+    rowdata2.style.display = 'none';
+
+    pweight.style.display = 'inline';
+    rowdata3.style.display = 'none';
+  }
+
+  showingPrimaryStats = !showingPrimaryStats;
+}
+
+nextInfo.addEventListener("click", ()=> stats());
+backInfo.addEventListener("click", ()=> statsmain());
 
 
 // Event Listener Music 

@@ -73,7 +73,7 @@
         <div class="black-button"></div>
         <div class="red-pill-button"></div>
         <div class="blue-pill-button"></div>
-        <input class="id-input" type="text" placeholder="0000" value="" maxlength="" min="1" max="898"></input>
+        <input class="id-input" type="text" placeholder="0000" value="" maxlength=""></input>
         <div class="directional-pad">
           <div class="directional-up"></div>
           <div class="directional-right"></div>
@@ -85,9 +85,13 @@
       </div>
       <div class="secondary-container">
         <div class="large-screen">
-          <p>Name: <span id="name">?</span></p>
-          <p>Height: <span id="height">?</span></p>
-          <p>Weight: <span id="weight">?</span></p> 
+          <p class="pname">Name: <span id="name">?</span></p>
+          <p class="pheight">Height: <span id="height">?</span></p>
+          <p class="pweight">Weight: <span id="weight">?</span></p>
+          <!-- Nuevos elementos para ataque, defensa y vida -->
+          <p class="rowdata1">HP: <span id="hp">?</span> Speed: <span id="speed">?</span></p><br>
+          <p class="rowdata2">Atk: <span id="attack">?</span> Def: <span id="defense">?</span></p>
+          <p class="rowdata3">SpAtk: <span id="spattack">?</span> SpDef: <span id="spdefense">?</span></p>
         </div>
         <div class="blue-buttons">
           <div class="blue-button"></div>
@@ -106,8 +110,8 @@
           <div class="black-pill-button"></div>
         </div>
         <div class="white-buttons">
-          <div id="white-button1"></div>
-          <div id="white-button2"></div>
+          <div id="white-button1"><i class="fa-solid fa-arrow-left"></i></div>
+          <div id="white-button2"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
         <div class="yellow-light"></div>
         <div class="small-screens">

@@ -177,6 +177,14 @@ img.pokemon-picture {
   padding-left: 4.5px;
 }
 
+
+.rowdata1, .rowdata2, .rowdata3{
+
+  display: none;
+}
+
+
+
 /*--------------------------------------------------------------
 # Main container - Contenedor principal
 --------------------------------------------------------------*/
@@ -712,7 +720,10 @@ img.pokemon-picture {
 
 
 #white-button1, #white-button2 {
-
+  
+  display:flex;
+  align-items: center;     
+  justify-content: center;
   background: var(--white);
   border-radius: 4px;
   height: 100%;
