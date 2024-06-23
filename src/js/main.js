@@ -47,7 +47,7 @@ const handleSearchPokemon = (id)=>{
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
   .then( response => {
     if(!response.ok){
-      return responde.json().then(err => {throw new Error(err.message)}) 
+      return response.json().then(err => {throw new Error(err.message)}) 
     }
     return response.json()
   })
@@ -62,14 +62,17 @@ const handleSearchPokemon = (id)=>{
     type1Name = jsonResponse.types[0].type.name; // variable for color change in background
     updateBackgroundColor(type1Name); // function that allows us to change the background
 
-    
-    type2.innerHTML = "___";
-    type2.innerHTML = jsonResponse.types[1].type.name;
-    
+    type2.innerHTML = jsonResponse.types[1] ? jsonResponse.types[1].type.name : "___";
+
     
   })
   .catch(error =>{
-    console.log(error);
+    namePokemon.innerHTML =` ${inputField.value} not found`
+    height.innerHTML = `?`;
+    weight.innerHTML = `?`;
+    const body = document.body;
+    body.style.backgroundColor = 'var(--white)';
+    imagePokemon.src = "./public/images/pokedexScreen/errorScren2.jpg";
   })
 
 }
