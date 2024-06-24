@@ -21,7 +21,7 @@ let currentPokemonId = 0; // initial variable for the current pokemon id
 const directionalRigth = document.querySelector('.directional-right')
 const directionalLeft = document.querySelector('.directional-left')
 const directionalUp = document.querySelector('.directional-up')
-const directionalDown = document.querySelector(".directional-down")
+const directionalDown = document.querySelector('.directional-down')
 
 //Data of Music 
 const playButton = document.getElementById('playButton');
@@ -115,13 +115,25 @@ const handleSearchPokemon = (id)=>{
   })
   .catch(error =>{
 
+    if(id === ''){
+
+      const body = document.body;
+      namePokemon.innerHTML =`insert a name or id`
+      height.innerHTML = `?`;
+      weight.innerHTML = `?`; 
+      body.style.backgroundColor = 'var(--white)';
+      imagePokemon.src = "./public/images/pokedexScreen/errorScren3.png";
+      return 0;
+    }
+
     const body = document.body;
 
-    namePokemon.innerHTML =` ${inputField.value} not found`
+    namePokemon.innerHTML =`${inputField.value} not found`
     height.innerHTML = `?`;
     weight.innerHTML = `?`; 
     body.style.backgroundColor = 'var(--white)';
     imagePokemon.src = "./public/images/pokedexScreen/errorScren3.png";
+
   })
 
 }
