@@ -91,7 +91,7 @@ const handleSearchPokemon = (id)=>{
     return response.json()
   })
   .then(jsonResponse =>{
-    console.log(jsonResponse); // es para ver en consola los datos que llegaron de la api
+
     imagePokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${jsonResponse.id}.png`;
     namePokemon.innerHTML = jsonResponse.name;
     height.innerHTML = `${(jsonResponse.height/10)} m`;
@@ -121,7 +121,7 @@ const handleSearchPokemon = (id)=>{
     height.innerHTML = `?`;
     weight.innerHTML = `?`; 
     body.style.backgroundColor = 'var(--white)';
-    imagePokemon.src = "./public/images/pokedexScreen/errorScren2.jpg";
+    imagePokemon.src = "./public/images/pokedexScreen/errorScren3.png";
   })
 
 }
