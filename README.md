@@ -36,7 +36,7 @@ _Una vez lograda la instalación de las dependencias, el proyecto esta listo par
 
 ## Despliegue 📦
 
-* _Para realizar un desplegue local (localhost:5173) del proyecto, se procede a ejecutar uno de los siguientes comandos:_
+* _Para realizar un despligue local (localhost:5173) del proyecto, se procede a ejecutar uno de los siguientes comandos:_
 
 ```
 npm run dev
