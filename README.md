@@ -13,7 +13,7 @@ Lo que garantiza la compatibilidad y la facilidad de mantenimiento del proyecto 
 
 ### Pre-requisitos 📋
 
-* Versión 12.2.0 o superior de [Node.js](https://nodejs.org/en/)
+* Vite requiere Node.js version 18+ o 20+ [Node.js](https://nodejs.org/en/)
 * Para el proyecto se usó [Visual Studio Code](https://code.visualstudio.com/) como entorno de desarollo, pero se puede utilizar otras opciones.
 
 
