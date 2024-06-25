@@ -22,7 +22,7 @@ Lo que garantiza la compatibilidad y la facilidad de mantenimiento del proyecto 
 ### Instalación 🔧
 
 _Iniciamos con la descarga del repositorio. Para ello se debe abrir la consola,
-ubicarse en la carpera en la que desea guardar el proyecto y ejecutar el siguiente comando:_
+ubicarse en la carpeta en la que desea guardar el proyecto y ejecutar el siguiente comando:_
 
 ```
 git clone https://github.com/CarlosDev73/JS-Pokedex.git
