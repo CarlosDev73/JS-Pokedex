@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="https://CarlosDev73.github.io/JS-Pokedex/assets/pokebola-BgU1rhYs.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3a05d4278a.js" crossorigin="anonymous"></script>
+
+    <!-- Template Main CSS File <i class="fa-solid fa-play"></i>-->
+
+    <script type="module" crossorigin src="https://CarlosDev73.github.io/JS-Pokedex/assets/index-CLQRFAO0.js"></script>
+    <link rel="stylesheet" crossorigin href="https://CarlosDev73.github.io/JS-Pokedex/assets/index-CVq8qKUe.css">
+  </head>
+  <body>
+    <div class="sound">
+
+      
+        <div class="pokeball" role="button" id="playButton">
+          <div class="boton">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </div>
+        
+
+        <div class="pokeball" role="button" id="pauseButton">
+          <div class="boton">
+            <i class="fa-solid fa-pause"></i>
+          </div>
+        </div>
+      
+      
+    </div>
+    <div class="pokedex">
+      <div class="main-container">
+
+        <div class="hinge"></div>
+
+        <div class="blue-led"></div>
+
+        <div class="leds">
+          <div class="red"></div>
+          <div class="yellow"></div>
+          <div class="green"></div>
+        </div>
+
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+
+        <div class="screen-pokemon">
+          <div class="corner-triangle"></div>
+          <div class="red-dot-1"></div>
+          <div class="red-dot-2"></div>
+          <div class="screen">
+            <img
+              class="pokemon-picture"
+            />
+          </div>
+          <div class="red-dot-3"></div>
+          <div class="speakerbars">
+            <div class="speakerbar"></div>
+            <div class="speakerbar"></div>
+            <div class="speakerbar"></div>
+            <div class="speakerbar"></div>
+          </div>
+        </div>
+
+        <div class="black-button"></div>
+        <div class="red-pill-button"></div>
+        <div class="blue-pill-button"></div>
+        <input class="id-input" type="text" placeholder="name/id" value="" maxlength="11"></input>
+        <div class="directional-pad">
+          <div class="directional-up"></div>
+          <div class="directional-right"></div>
+          <div class="circle"></div>
+          <div class="directional-down"></div>
+          <div class="directional-left"></div>
+        </div>
+
+      </div>
+      <div class="secondary-container">
+        <div class="large-screen">
+          <p class="pname">Name:<span id="name">?</span></p>
+          <p class="pheight">Height:<span id="height">?</span></p>
+          <p class="pweight">Weight:<span id="weight">?</span></p>
+          <!-- Nuevos elementos para ataque, defensa y vida -->
+          <p class="rowdata1">HP:<span id="hp">?</span> Speed:<span id="speed">?</span></p><br>
+          <p class="rowdata2">Atk:<span id="attack">?</span> Def:<span id="defense">?</span></p><br>
+          <p class="rowdata3">SAtk:<span id="spattack">?</span> SDef:<span id="spdefense">?</span></p>
+        </div>
+        <div class="blue-buttons">
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+          <div class="blue-button"></div>
+        </div>
+        <div class="black-pill-buttons">
+          <div class="black-pill-button"></div>
+          <div class="black-pill-button"></div>
+        </div>
+        <div class="white-buttons">
+          <div id="white-button1"><i class="fa-solid fa-arrow-left"></i></div>
+          <div id="white-button2"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="yellow-light"></div>
+        <div class="small-screens">
+          <div class="small-screen-secondary">
+            <p id="type-1">---</p>
+          </div>
+          <div class="small-screen-secondary">
+            <p id="type-2">---</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      
+    </div>
+
+  </body>
+</html>
