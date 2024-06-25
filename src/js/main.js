@@ -26,8 +26,9 @@ const directionalDown = document.querySelector('.directional-down')
 //Data of Music 
 const playButton = document.getElementById('playButton');
 const pauseButton = document.getElementById('pauseButton')
-let sound = new Audio('./public/sound/pokemonIntro.mp3');
-sound.volume = 0.55;
+import sound from '/public/sound/pokemonIntro.mp3'
+let audio = new Audio(sound);
+audio.volume = 0.55;
 
 // pokemon stats
 
@@ -98,7 +99,7 @@ const handleSearchPokemon = (id)=>{
     weight.innerHTML = `${(jsonResponse.weight/10)} kg`;
     type1.innerHTML = jsonResponse.types[0].type.name;
 
-    type1Name = jsonResponse.types[0].type.name; // variable for color change in background
+    let type1Name = jsonResponse.types[0].type.name; // variable for color change in background
     updateBackgroundColor(type1Name); // function that allows us to change the background
 
     type2.innerHTML = jsonResponse.types[1] ? jsonResponse.types[1].type.name : "___";
@@ -350,8 +351,8 @@ backInfo.addEventListener("click", ()=> statsmain());
 // Event Listener Music 
 
 
-playButton.addEventListener("click", ()=> sound.play());
+playButton.addEventListener("click", ()=> audio.play());
 
 
-pauseButton.addEventListener("click", ()=> sound.pause());
+pauseButton.addEventListener("click", ()=> audio.pause());
 
