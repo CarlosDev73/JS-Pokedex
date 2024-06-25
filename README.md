@@ -1,6 +1,7 @@
 # Pokédex
 La Pokédex proporciona a los usuarios la capacidad de buscar y explorar información detallada sobre diversas especies de Pokémon.
-La interfaz intuitiva y atractiva garantiza una experiencia de usuario inmersiva y dinamica. 
+La interfaz intuitiva y atractiva garantiza una experiencia de usuario inmersiva y dinamica.
+[Vista previa](https://carlosdev73.github.io/JS-Pokedex/)
 
 ## Comenzando 🚀
 
