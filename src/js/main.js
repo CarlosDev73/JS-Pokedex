@@ -52,7 +52,8 @@ const backInfo = document.getElementById('white-button1')
 
 let showingPrimaryStats = true; 
 
-
+// Data error Scren 
+import errorScreen from '/public/images/pokedexScreen/errorScren3.png';
 
 /*--------------------------------------------------------------
 #                      Change Fields
@@ -123,7 +124,7 @@ const handleSearchPokemon = (id)=>{
       height.innerHTML = `?`;
       weight.innerHTML = `?`; 
       body.style.backgroundColor = 'var(--white)';
-      imagePokemon.src = "./public/images/pokedexScreen/errorScren3.png";
+      imagePokemon.src = errorScreen;
       return 0;
     }
 
@@ -133,7 +134,7 @@ const handleSearchPokemon = (id)=>{
     height.innerHTML = `?`;
     weight.innerHTML = `?`; 
     body.style.backgroundColor = 'var(--white)';
-    imagePokemon.src = "./public/images/pokedexScreen/errorScren3.png";
+    imagePokemon.src = errorScreen;
 
   })
 
