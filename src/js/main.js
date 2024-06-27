@@ -53,6 +53,7 @@ const backInfo = document.getElementById('white-button1')
 let showingPrimaryStats = true; 
 
 // Data error Scren 
+
 import errorScreen from '/public/images/pokedexScreen/errorScren3.png';
 
 /*--------------------------------------------------------------
